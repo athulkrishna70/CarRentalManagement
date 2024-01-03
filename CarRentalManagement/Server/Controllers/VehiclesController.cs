@@ -35,7 +35,7 @@ namespace CarRentalManagement.Server.Controllers
 			//    return NotFound();
 			//}
 			// return await _context.Vehicles.ToListAsync();
-			var Vehicles = await _unitOfWork.Vehicles.GetAll();
+			var Vehicles = await _unitOfWork.Vehicles.GetAll(includes: q => q.Include(x =>x.make).Include(x => x.model).Include(x => x.colour));
 			return Ok(Vehicles);
 		}
 

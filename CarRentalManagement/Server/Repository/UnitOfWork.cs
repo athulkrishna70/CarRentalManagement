@@ -16,7 +16,7 @@ namespace CarRentalManagement.Server.Repository
     public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _context;
-        private IGenericRepository<make> _makes;
+        private IGenericRepository<Make> _makes;
         private IGenericRepository<model> _models;
         private IGenericRepository<colour> _colours;
         private IGenericRepository<Booking> _bookings;
@@ -31,8 +31,8 @@ namespace CarRentalManagement.Server.Repository
             _userManager = userManager;
         }
 
-        public IGenericRepository<make> Makes
-            => _makes ??= new GenericRepository<make>(_context);
+        public IGenericRepository<Make> Makes
+            => _makes ??= new GenericRepository<Make>(_context);
         public IGenericRepository<model> Models
             => _models ??= new GenericRepository<model>(_context);
         public IGenericRepository<colour> Colours

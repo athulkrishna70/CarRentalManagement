@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CarRentalManagement.Server.Configurations.Entities
 {
-	public class MakeSeedConfiguration : IEntityTypeConfiguration<make>
+	public class MakeSeedConfiguration : IEntityTypeConfiguration<Make>
 	{
-		public void Configure(EntityTypeBuilder<make> builder)
+		public void Configure(EntityTypeBuilder<Make> builder)
 		{
 			builder.HasData(
-				new make
+				new Make
 				{
 					Id = 1,
 					Name = "BMW",
@@ -18,7 +18,7 @@ namespace CarRentalManagement.Server.Configurations.Entities
 					CreatedBy = "System",
 					UpdatedBy = "System"
 				},
-				new make
+				new Make
 				{
 					Id = 2,
 					Name = "Toyota",

@@ -10,7 +10,7 @@ namespace CarRentalManagement.Server.IRepository
     public interface IUnitOfWork : IDisposable
     {
         Task Save(HttpContext httpContext);
-        IGenericRepository<make> Makes { get; }
+        IGenericRepository<Make> Makes { get; }
         IGenericRepository<model> Models { get; }
         IGenericRepository<vehicle> Vehicles { get; }
         IGenericRepository<colour> Colours { get; }

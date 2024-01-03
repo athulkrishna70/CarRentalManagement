@@ -20,7 +20,7 @@ namespace CarRentalManagement.Server.Data
 		public DbSet<colour> colours { get; set; }
 		public DbSet<Booking> Bookings { get; set; }
 		public DbSet<Customer> customers { get; set; }
-		public DbSet<make> makes { get; set; }
+		public DbSet<Make> makes { get; set; }
 		public DbSet<model> models { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder builder)

@@ -42,7 +42,7 @@ namespace CarRentalManagement.Server.Controllers
         // GET: api/makes/5
         [HttpGet("{id}")]
         //public async Task<ActionResult<make>> Getmake(int id)
-        public async Task<ActionResult> GetMakes(int id)
+        public async Task<ActionResult> GetMake(int id)
         {
             //if (_context.makes == null)
             //{
@@ -62,7 +62,7 @@ namespace CarRentalManagement.Server.Controllers
         // PUT: api/makes/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> Putmake(int id, make make)
+        public async Task<IActionResult> Putmake(int id, Make make)
         {
             if (id != make.Id)
             {
@@ -94,7 +94,7 @@ namespace CarRentalManagement.Server.Controllers
         // POST: api/makes
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<make>> Postmake(make make)
+        public async Task<ActionResult<Make>> Postmake(Make make)
         {
            // _context.makes.Add(make);
             //await _context.SaveChangesAsync();

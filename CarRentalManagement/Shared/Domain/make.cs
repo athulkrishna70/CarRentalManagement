@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarRentalManagement.Shared.Domain
 {
-	public class make : BaseDomainModel
+    public class Make : BaseDomainModel
 	{
 		public String? Name {  get; set; }
 	}
